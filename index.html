@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css\jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" text="text/css" href="css\stylenew.css"/>
+	<link rel="stylesheet" text="text/css" href="css\spin.css"/>
+
+	<script src="js\jquery-1.10.2.min.js"></script>
+	<script src="js\jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js\jqm-spinbox.min.js"></script>
+	<script src="js\funcs_pageone.js"></script>
+	<script src="js\funcs_pagetwo.js"></script>
+	<script src="js\spin.js"></script>
+
+	
+</head>
+
+<body onLoad="firstFunction()" >
+
+<!-- PAGE ONE -->
+<div data-role="page" id="pageone">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false"  id="head" data-theme="b">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+			<h3>TOTAL<br/>Rs. <span id = "total_price">0.00</span></h3>
+				</div>
+			<div class="ui-block-b">
+				<h3>ITEMS<br/><span id = "total_items">0</span></h3>
+			</div>
+		</div>
+	
+		<div class="ui-grid-b">
+			<div class="ui-block-a"><a id="btnExpand"  class="ui-btn ui-corner-all collapseExpand">Expand All</a></div>
+			<div class="ui-block-b"><a id="btnCollapse" class="ui-btn ui-corner-all collapseExpand">Collapse All</a></div>
+			<div class="ui-block-c"><a id="btnDelete" class="ui-btn ui-corner-all " onClick="deleteAll()">Delete All</a></div>
+		</div>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<div id="wrapper" data-role="content"></div>
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-theme="b" id="foot">
+		<div data-role="navbar" data-theme="b" class = "app"> 
+		<ul>
+			<li><a href="#" data-icon="plus" class="topcoat-button" id= "scan" onclick ="startScanner()">Scan QR-Code</a></li>
+			<li><a href="#pagetwo" data-icon="arrow-r" id = "payButton">Pay</a></li>
+		</ul>
+		</div>
+	</div>
+</div> 
+
+<!-- PAGE ONE ENDS -->
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="barcodescanner.js"></script>
+	<script type="text/javascript" src="childbrowser.js"></script>
+	<script type="text/javascript" src="js/barcode.js"></script>
+	<script type="text/javascript">app.initialize();</script>
+
+<script>
+//var obj={key:"VC",Id:"1171",mrp:"99",Name:"p2",url:"http://172.17.10.26/VC_Server/Default.aspx"};
+var obj;
+var cart=[];
+var temprod;
+var total_price=0.00;
+var total_Discount = 0.00;
+var cart_top=0;
+
+var appUniqueKey="VC";
+var separator=",";
+var server_url;
+</script>
+
+<!-- PAGE TWO -->
+
+<div data-role="page" id="pagetwo" >
+	<div data-role="header" data-position="fixed" data-theme="b" id="pagetwoHeader">
+		<h1 id="grandTotal">Grand Total: Rs. <span id = "grandTotalPagetwo"></span></h1> 
+		<h2 id="totalDiscount">Total Discount: Rs. <span id = "totalDiscountPagetwo"></span></h2>
+	</div>
+	<div id="viewbill" data-role="main" class="ui-content">
+		<div  data-role="collapsible" data-theme="b">
+			<h1>View Bill</h1>
+		
+		
+		
+		
+			<div class="ui-grid-c" id = "billDetails">
+
+		</div>		
+		</div>		
+	</div>	
+	<div data-role="footer" data-position="fixed" data-theme="b" id="footerTwo">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="#" id="finalSend" data-icon="arrow-r" onclick = "sendToBiller()">Check Out</a></li>
+				<li><a href="#pageone" data-icon="edit">Edit</a></li>
+				<li><a href="#" onclick="exitApp()" data-icon="home">Exit</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- Page two ends -->
+
+
+<script>
+	$(document).on("pagecreate", "#pageone", function () {
+
+    $(".collapseExpand").on("click", function(){
+        var collapseAll = this.id == "btnCollapse";
+        $('#wrapper [data-role="collapsible"]').collapsible("option", "collapsed", collapseAll);
+    });
+    
+    
+	});
+</script>
+</body>
+
+</html>

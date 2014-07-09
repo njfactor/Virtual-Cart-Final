@@ -1,0 +1,153 @@
+.myInput
+{
+/* 	border-top: 1px solid #909090;
+	border-bottom: 1px solid #909090; */
+	padding: 0px;
+	margin-left: 7%;
+	margin-top:1%;
+/* 	margin-right:25%;
+	margin-left:45%; */
+/* 	background-color: yellow; */
+
+}
+.myInput>.myInputButtonMinus,.myInput>.myInputButtonPlus
+{
+	font-size:150%;
+	font-weight:bold;
+	color: #eeeeee;
+	width: 29%;
+	text-align:center;
+	padding:0px;
+	background-color: #444444;
+	border: 2px solid #000000;
+	position:relative;
+/* 	float: left; */
+	
+}
+
+
+.myInput>.myInputBox
+{
+	border: 0px;
+	margin: 0px;
+	font-size: 150%;
+	width: 39%;	
+	padding: 0;
+	text-align: center;
+	position:relative;
+/* 	float: center; */
+}
+
+#foot,#pageTwoFooter{
+
+	position:fixed;
+
+}
+
+#head,#pagetwoHeader
+{
+	position:fixed;
+}
+
+#scan
+{
+	font-size: 110%;	
+}
+
+#payButton
+{
+	font-size: 110%;	
+}
+
+/* #head,#pagetwoHeader
+{
+	height:20%;
+} */
+#head > div.ui-grid-a
+{
+	/* margin-top: 4%; */
+	text-align: center;
+	font-size: 130%;
+/* 	height: 60%; */
+}
+
+#head > div.ui-grid-b
+{
+	background-color: #222222;
+/* 	height: 40%; */
+}
+
+/* #head > div.ui-grid-a > div.ui-block-a > h3,#head > div.ui-grid-a > div.ui-block-b > h3
+{
+
+	margin-top: 4%;
+	margin-bottom: 2%;
+} */
+
+#btnExpand,#btnCollapse,#btnDelete
+{
+	width: 70%;
+	background-color: #000000;
+	font-size: 100%
+}
+
+#pageone > div.ui-content
+{
+	padding: 0;
+}
+
+#wrapper
+{/* 	width:100%; */
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 0;
+	margin-top:3%;
+}
+
+.imagesOnPageone
+{
+	width: 90%;
+}
+
+
+
+#pagetwo
+{
+	font-size: 100%;
+}
+
+
+#viewbill
+{
+	padding: 2%;
+	font-size:110%;
+}
+
+#viewbill > div > h1 > a
+{
+	font-size:70%;
+}
+
+#grandTotal
+{
+/* height: 60; */
+font-size:160%;
+margin:0;
+
+text-align:center;
+}
+
+#totalDiscount
+{
+height: 40%;
+margin:0;
+text-align:center;
+font-size:120%;
+}
+
+
+#finalSend,#pagetwo > div.ui-footer.ui-bar-b.ui-footer-fixed.slideup > div > ul > li.ui-block-c > a,#pagetwo > div.ui-footer.ui-bar-b.ui-footer-fixed.slideup > div > ul > li.ui-block-b > a
+{
+	font-size: 110%;
+
+}

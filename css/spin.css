@@ -1,0 +1,35 @@
+.uiv2-grid-count-btn {
+border: 1px solid #e0e0e0;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+overflow: hidden;
+height: 21px;
+float: left;
+margin-right: 4px;
+}
+
+.uiv2-grid-count-btn button {
+float: left;
+border: 0;
+cursor: pointer;
+width: 17px;
+height: 21px;
+color: #989898;
+font: 500 14px/14px 'Roboto Slab',serif;
+background: linear-gradient(to bottom,#fff 0,#eaeaea 99%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#eaeaea',GradientType=0);
+}
+
+.uiv2-grid-count-btn input {
+float: left;
+border: 1px solid #e3e3e3;
+border-top: 0;
+border-bottom: 0;
+width: 24px;
+height: 21px;
+background: #fff;
+font: 400 12px/16px Lato,sans-serif;
+color: #000;
+text-align: center;
+}
