@@ -50,7 +50,7 @@
 	<div data-role="footer" data-position="fixed" data-theme="b" id="foot">
 		<div data-role="navbar" data-theme="b" class = "app"> 
 		<ul>
-			<li><a href="#" data-icon="plus" class="topcoat-button" id= "scan" onclick ="startScanner()">Scan QR-Code</a></li>
+			<li><a href="#" data-icon="plus" class="topcoat-button" id= "scan" onclick ="startScanner()">Add New Product</a></li>
 			<li><a href="#pagetwo" data-icon="arrow-r" id = "payButton">Pay</a></li>
 		</ul>
 		</div>
@@ -87,14 +87,9 @@ var server_url;
 		<h2 id="totalDiscount">Total Discount: Rs. <span id = "totalDiscountPagetwo"></span></h2>
 	</div>
 	<div id="viewbill" data-role="main" class="ui-content">
-		<div  data-role="collapsible" data-theme="b">
+		<div  data-role="collapsible" data-collapsed="false" data-theme="b">
 			<h1>View Bill</h1>
-		
-		
-		
-		
 			<div class="ui-grid-c" id = "billDetails">
-
 		</div>		
 		</div>		
 	</div>	
@@ -102,8 +97,7 @@ var server_url;
 		<div data-role="navbar" data-theme="b">
 			<ul>
 				<li><a href="#" id="finalSend" data-icon="arrow-r" onclick = "sendToBiller()">Check Out</a></li>
-				<li><a href="#pageone" data-icon="edit">Edit</a></li>
-				<li><a href="#" onclick="exitApp()" data-icon="home">Exit</a></li>
+				<li><a href="#pageone" data-icon="edit">Manage Cart</a></li>
 			</ul>
 		</div>
 	</div>
